@@ -144,7 +144,8 @@ public final class GraalVM {
             }
             int idx = buildInfo.indexOf(JVMCI_BUILD_PREFIX);
             if (idx < 0) {
-                return null;
+                // no build info -- GraalVM runs on a stock JDK
+                return GRAAL_MAPPING.get(jdkFeature);
             }
             String version = buildInfo.substring(idx + JVMCI_BUILD_PREFIX.length());
             Matcher versMatcher = VERSION_PATTERN.matcher(version);
