@@ -67,7 +67,7 @@ public final class GraalVM {
                 String vendorVersion = secondMatcher.group(VENDOR_VERSION_GROUP);
 
                 String graalVersion = graalVersion(javaVersion, v.feature());
-                if (vendorVersion.contains("-dev")) {
+                if (vendorVersion.contains("-dev") || vendorVersion.contains("-ea")) {
                     graalVersion = graalVersion + "-dev";
                 }
                 String versNum;
