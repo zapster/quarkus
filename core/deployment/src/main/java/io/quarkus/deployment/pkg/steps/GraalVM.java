@@ -161,8 +161,8 @@ public final class GraalVM {
     // https://github.com/quarkusio/quarkus/issues/34161
     private static final Map<Integer, String> GRAAL_MAPPING = Map.of(22, "24.0",
             23, "24.1",
-            24, "25.0",
-            25, "25.1");
+            24, "24.2",
+            25, "25.0");
 
     public static final class Version implements Comparable<Version> {
 
